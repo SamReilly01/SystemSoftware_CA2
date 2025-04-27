@@ -123,7 +123,7 @@
      fgets(password, sizeof(password), stdin);
      password[strcspn(password, "\n")] = 0; // Remove newline
      
-     // Send username to server and wait before sending password
+     // Send username to server
      if (send(sock, username, strlen(username), 0) < 0) {
          perror("Send username failed");
          return -1;
